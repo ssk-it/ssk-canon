@@ -4,7 +4,7 @@ titre: Initialisation du prototype
 statut: en_relecture
 domaines: [persistance, cadrage]
 liens:
-  - { tag: issue_github, url: 'https://github.com/exemple/prime-cadrage/issues/1' }
+  - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon-pwa/issues/1' }
 impacts:
   - { regle: RG-parseur-partage, operation: cree }
   - { regle: RG-format-fichier, operation: touche }
@@ -22,7 +22,7 @@ le dépôt à la main est le seul test honnête — si le format est pénible à
 ainsi, il sera pénible à lire.
 
 Ce cadrage décrit sa propre production : le dépôt d'exemple est le référentiel de
-Prime Cadrage décrit dans son propre format.
+SSK Canon décrit dans son propre format.
 
 ## Parcours utilisateur
 

@@ -2,9 +2,9 @@
 schema_version: 1
 
 projet:
-  nom: Prime Cadrage
+  nom: SSK Canon
   description: >
-    Le référentiel de Prime Cadrage, décrit dans son propre format.
+    Le référentiel de SSK Canon, décrit dans son propre format.
     Ce dépôt sert à la fois de jeu de test au prototype et de spécification
     vivante du produit : les décisions prises pendant sa conception y sont
     consignées comme des cadrages.
@@ -29,5 +29,5 @@ operations:
 
 attachments:
   provider: scaleway
-  bucket: prime-cadrage-demo
+  bucket: ssk-canon-demo
   region: fr-par

@@ -1,6 +1,6 @@
-# Prime Cadrage — le référentiel du produit, dans son propre format
+# SSK Canon — le référentiel du produit, dans son propre format
 
-Ce dépôt est le référentiel de Prime Cadrage décrit avec Prime Cadrage. Les
+Ce dépôt est le référentiel de SSK Canon décrit avec SSK Canon. Les
 décisions prises pendant la conception du produit y sont consignées comme des
 cadrages, avec leurs options écartées et leurs motifs.
 
@@ -68,7 +68,7 @@ sont dérivés, jamais édités à la main.
 ## Structure
 
 ```
-prime-cadrage.yml    configuration et version du schéma
+ssk-canon.yml    configuration et version du schéma
 domains/             les domaines fonctionnels
 features/            les fonctionnalités, à plat
 rules/               les règles de gestion, à plat — chemins immuables
