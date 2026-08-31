@@ -20,6 +20,7 @@ créé, il ne saura rien exprimer.
 | 2026-006 | Lecture du référentiel depuis un dépôt public | livrée |
 | 2026-007 | Navigation dans une fiche de cadrage | livrée |
 | 2026-008 | Connexion facultative pour relever les limites d'appels | livrée |
+| 2026-009 | Repères temporels et ordre de la liste des cadrages | livrée |
 
 ## Ce que ce dépôt couvre volontairement
 
@@ -27,10 +28,12 @@ créé, il ne saura rien exprimer.
   en relecture dont la règle créée n'existe pas encore dans `rules/` — ce qui est
   correct tant qu'il n'est pas livré.
 - **Les quatre opérations d'impact** : crée, modifie, abroge, touche.
-- **Une décision annulée** — `2026-003/02-duree-autorisations`, dont l'hypothèse
-  de départ s'est révélée fausse. Elle est conservée avec son motif d'annulation,
-  parce que savoir qu'une question a été posée et pourquoi elle est devenue sans
-  objet vaut mieux que son effacement.
+- **Deux décisions annulées** — `2026-003/02-duree-autorisations`, dont
+  l'hypothèse de départ s'est révélée fausse, et
+  `2026-009/03-date-de-changement-de-statut`, écartée faute de source à la fois
+  exacte et abordable. Toutes deux sont conservées avec leur motif : savoir
+  qu'une question a été posée et pourquoi elle est restée sans réponse vaut mieux
+  que son effacement.
 - **Des règles modifiées par un cadrage ultérieur** — `RG-rattachement-multiple`,
   `RG-statuts-cadrage` et `RG-propagation-livraison` sont créées par 2026-001 puis
   précisées par 2026-002. Les énoncés de 2026-001 disent moins que les actuels :
