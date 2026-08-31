@@ -32,6 +32,16 @@ transitions:
 # cadrage l'est, prête à relire dès qu'il passe en relecture.
 reflet_demande_fusion: true
 
+# Comment les rédacteurs obtiennent l'accès au dépôt.
+acces: identite_tierce
+
+# Où l'identité est vérifiée. Rien de secret : le client est public, et c'est
+# l'échange à secret jetable qui le protège.
+identite:
+  emetteur: http://localhost:8088/realms/ssk-canon
+  client: ssk-canon-pwa
+  echange: http://localhost:8790
+
 operations:
   - cree
   - modifie
