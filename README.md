@@ -19,6 +19,7 @@ créé, il ne saura rien exprimer.
 | 2026-005 | Commentaires du client sur un cadrage | brouillon |
 | 2026-006 | Lecture du référentiel depuis un dépôt public | livrée |
 | 2026-007 | Navigation dans une fiche de cadrage | livrée |
+| 2026-008 | Connexion facultative pour relever les limites d'appels | livrée |
 
 ## Ce que ce dépôt couvre volontairement
 
