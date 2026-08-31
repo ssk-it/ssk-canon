@@ -33,14 +33,17 @@ transitions:
 reflet_demande_fusion: true
 
 # Comment les rédacteurs obtiennent l'accès au dépôt.
+# jeton_personnel : chacun apporte le sien — rien à héberger.
+# identite_tierce : un composant échange une identité contre un accès temporaire.
+# relais : chaque requête passe par un composant qui la vérifie.
 acces: identite_tierce
 
-# Où l'identité est vérifiée. Rien de secret : le client est public, et c'est
-# l'échange à secret jetable qui le protège.
+# Où les identités sont vérifiées. Rien de secret ici : ce sont les valeurs
+# que porte toute application s'exécutant dans un navigateur.
 identite:
   emetteur: http://localhost:8088/realms/ssk-canon
   client: ssk-canon-pwa
-  echange: http://localhost:8790
+  echange: http://localhost:8791
 
 operations:
   - cree
