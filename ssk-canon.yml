@@ -26,7 +26,7 @@ statuts:
 transitions:
   brouillon: [en_relecture]
   en_relecture: [brouillon, validee]
-  validee: [en_relecture]
+  validee: []
 
 # La demande de fusion reflète le statut : ouverte en brouillon tant que le
 # cadrage l'est, prête à relire dès qu'il passe en relecture.
