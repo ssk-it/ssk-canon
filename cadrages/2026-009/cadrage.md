@@ -59,7 +59,7 @@ La **date de création** d'un cadrage est présentée dans la liste.
 
 Elle n'est pas stockée dans les fichiers : elle se déduit du premier changement
 enregistré sur le cadrage. Le stocker créerait une seconde source de vérité, qui
-divergerait.
+divergerait — voir la règle sur l'histoire dérivée.
 
 Elle est obtenue **à la demande**, une fois la liste affichée, et non au
 chargement du référentiel. La liste apparaît immédiatement ; les dates la
@@ -73,3 +73,8 @@ cadrages livrés d'abord, du plus récent au plus ancien.
 L'ordre s'oppose délibérément à celui de la liste des cadrages, parce que la
 question posée diffère. Devant une liste, on cherche ce qui reste à faire ;
 devant une règle, on part de son état actuel pour remonter vers son origine.
+
+Deux ordres nommés distinctement valent mieux qu'un ordre unique qu'un écran
+inverserait : le lecteur du code voit lequel s'applique, et modifier l'un
+n'altère pas l'autre par accident.
+

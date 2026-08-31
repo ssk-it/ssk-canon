@@ -75,14 +75,18 @@ Il n'est pas figé à la construction de l'application.
 
 La saisie accepte un nom court `organisation/depot` comme une URL complète.
 
+Une seule instance de l'application dessert ainsi plusieurs projets, et le
+changement de dépôt ne demande aucun redéploiement.
+
 ### RG-regulation-appels
 
 Les appels à l'API sont régulés **côté client**, par une file d'attente à
 concurrence bornée, avec repli sur le délai d'attente indiqué par le serveur.
 
-Les limites secondaires de la plateforme s'appliquent au jeton d'accès, donc à
-l'installation entière : tous les utilisateurs partagent le même budget. Le
-relais étant sans état, il ne peut pas réguler.
+Les limites secondaires de la plateforme — requêtes concurrentes, écritures par
+heure — s'appliquent au jeton d'accès, donc à l'installation entière : tous les
+utilisateurs partagent le même budget. Le relais étant sans état, il ne peut pas
+réguler.
 
 **Les canaux non soumis à ces limites disposent de leur propre file, plus
 large.** Les brider au même rythme que l'API ralentirait le chargement sans rien
@@ -91,3 +95,4 @@ fichiers.
 
 Corollaire pratique : les écritures sont groupées. Un enregistrement explicite ou
 une temporisation longue, jamais un commit à chaque frappe.
+

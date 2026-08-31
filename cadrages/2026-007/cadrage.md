@@ -59,6 +59,9 @@ la décision sur le stockage ? ».
 
 Chaque impact porte son opération, afin que la liste se parcoure d'un regard.
 
+Un cadrage nourri dépasse largement la hauteur d'un écran ; sans repère, le
+lecteur perd la structure et ne peut pas atteindre directement ce qu'il cherche.
+
 ### RG-position-de-lecture
 
 Le sommaire signale en permanence **l'élément en cours de lecture**.
@@ -91,3 +94,4 @@ référentiel.
 
 Le signalement précise que l'énoncé a été modifié par un cadrage ultérieur, et
 que le texte affiché est celui du cadrage consulté.
+

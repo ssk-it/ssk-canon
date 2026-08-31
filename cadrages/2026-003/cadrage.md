@@ -44,15 +44,15 @@ enseignements, dont un favorable et trois contraignants.
 Un objet référencé par la branche principale ou par un tag n'est **jamais
 supprimé**. Les autres relèvent d'une politique de rétention.
 
+La rejouabilité intégrale de l'historique et le bornage du stockage sont
+mutuellement exclusifs : ce partage tranche en faveur de la rejouabilité sur ce
+qui compte.
+
 Deux garde-fous obligatoires. Le comptage de références est **global au dépôt**,
 jamais local à un cadrage — la déduplication par hash fait que plusieurs cadrages
 partagent un objet. Et un objet créé depuis moins de vingt-quatre heures n'est
 jamais collecté, faute de quoi une collecte concurrente d'un téléversement en
 cours produirait un pointeur mort.
-
-La collecte procède par **marquage**, non par chemin : les règles de cycle de vie
-du fournisseur ne filtrent que sur un préfixe unique, ce qu'une arborescence par
-hash rend inutilisable.
 
 ### RG-pj-ordre-upload
 
@@ -62,3 +62,4 @@ ne soit commité.
 L'ordre inverse produirait un pointeur désignant un objet absent. Comme le
 stockage n'émet aucune notification, la réussite du téléversement est vérifiée
 explicitement avant le commit.
+

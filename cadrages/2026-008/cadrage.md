@@ -61,7 +61,9 @@ Se connecter reste possible et relève trois limites : le nombre d'appels
 autorisés par heure, l'accès aux dépôts privés, et — plus tard — l'écriture.
 
 L'ordre est délibéré : un client qui reçoit un lien doit pouvoir lire
-immédiatement.
+immédiatement. Exiger une authentification pour afficher un contenu public
+placerait un obstacle à l'endroit exact où le produit doit être le plus
+accueillant.
 
 ### RG-quota-signale-avant-epuisement
 
@@ -70,16 +72,16 @@ et propose de se connecter**, sans attendre l'échec.
 
 Une fois la limite atteinte, plus rien ne se charge pendant une heure. Prévenir
 pendant qu'il reste une marge coûte un bandeau ; ne pas prévenir coûte une heure
-d'indisponibilité incomprise.
+d'indisponibilité que l'utilisateur ne comprend pas.
 
 ### RG-message-nomme-la-cause
 
 Un message d'erreur **nomme la cause réelle** et indique quoi faire.
 
-Deux causes distinctes ne partagent jamais un message : un secret refusé et une
+Deux causes distinctes ne partagent jamais un message : un jeton refusé et une
 limite d'appels atteinte se ressemblent — l'application est bloquée dans les deux
 cas — mais la première se corrige en quelques secondes tandis que la seconde
-demande d'attendre.
+demande d'attendre. Les confondre envoie chercher au mauvais endroit.
 
 Le message tient compte de l'état : introuvable **sans** connexion suggère de
 vérifier que le dépôt est public ; introuvable **avec** connexion suggère de
@@ -94,7 +96,8 @@ L'application n'en affiche jamais que les derniers caractères, assez pour
 reconnaître lequel est en place, jamais assez pour le recopier.
 
 Elle indique au moment de la saisie quels droits sont réellement nécessaires, et
-permet de se déconnecter à tout moment.
+permet de se déconnecter à tout moment. Tant que l'application ne fait que lire,
+elle demande un accès en lecture seule.
 
 ### RG-chargement-hors-quota
 
@@ -112,3 +115,4 @@ alors qu'un référentiel modeste compte déjà plusieurs dizaines de fichiers.
 d'un appel par fichier. Ce mode répond à deux besoins : les dépôts privés, que le
 canal ordinaire ne dessert pas, et l'affichage immédiat de ce qui vient d'être
 livré. Il n'a de sens qu'une fois connecté et reste désactivé par défaut.
+

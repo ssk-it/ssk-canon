@@ -58,7 +58,8 @@ Le référentiel est la **projection des cadrages livrés**. Il ne s'édite pas
 directement.
 
 Toute modification d'une règle de gestion résulte de la livraison d'un cadrage
-déclarant un impact sur elle.
+déclarant un impact sur elle. Une modification apportée hors de ce chemin est une
+anomalie, que la vérification d'intégrité doit signaler.
 
 ### RG-rattachement-multiple
 
@@ -71,23 +72,33 @@ Chaque entité porte un identifiant **stable à vie**, lisible, qui ne change ja
 même si son intitulé ou son contenu est réécrit.
 
 Les règles suivent le format `RG-<slug-kebab>`, les cadrages `<année>-<séquence
-sur 3 chiffres>`. Les identifiants ne sont jamais réutilisés.
+sur 3 chiffres>`. Les identifiants ne sont jamais réutilisés, y compris après
+abrogation.
 
 ### RG-format-fichier
 
 Chaque entité est un fichier Markdown composé d'un **frontmatter YAML** et d'un
 **corps Markdown**.
 
-Le frontmatter porte ce que la machine interroge ; le corps porte ce que l'humain
-lit.
+Le partage entre les deux suit une règle unique : le frontmatter porte ce que la
+machine interroge — identifiants, statuts, rattachements, impacts ; le corps porte
+ce que l'humain lit — descriptions, objectifs, parcours, énoncés.
+
+Un fichier sans frontmatter, ou dont le YAML est invalide, est une erreur
+bloquante.
 
 ### RG-operations-impact
 
 Un impact déclare l'une de **quatre opérations** sur une règle de gestion :
-`cree`, `modifie`, `abroge`, `touche`.
 
-`touche` ne produit aucune écriture : elle trace une dépendance, ce qui en fait le
-signal de relecture le plus utile.
+- `cree` — la règle n'existait pas ; le cadrage la crée avec son énoncé.
+- `modifie` — la règle existe ; son énoncé est remplacé.
+- `abroge` — la règle cesse de s'appliquer. Son fichier n'est pas supprimé : une
+  règle abrogée reste consultable.
+- `touche` — aucune écriture. Trace une dépendance : le cadrage concerne cette
+  règle sans la changer. C'est le signal de relecture le plus utile.
+
+Un cadrage ne peut déclarer qu'un seul impact par règle.
 
 ### RG-statuts-cadrage
 
@@ -98,6 +109,10 @@ Un cadrage passe par quatre statuts : **brouillon**, **en relecture**,
 
 Chaque cadrage est rédigé sur sa **propre branche**, nommée `cadrage/<id>`, et
 livré par le merge de sa pull request.
+
+Deux cadrages simultanés n'entrent donc jamais en conflit. Deux personnes éditant
+le même cadrage produisent en revanche un conflit Git, que l'application doit
+présenter intelligemment.
 
 ### RG-propagation-livraison
 
@@ -110,14 +125,27 @@ L'**identité de la personne** et l'**accès technique au dépôt** sont portés
 deux mécanismes distincts.
 
 L'utilisateur s'authentifie auprès du fournisseur d'identité de l'organisation et
-n'a jamais connaissance de GitHub.
+n'a jamais connaissance de GitHub. L'accès au dépôt est porté par une application
+installée sur celui-ci, avec ses droits propres, indépendants de tout utilisateur.
+
+Cette séparation existe pour une raison précise : le client fait partie des
+utilisateurs mais n'a pas de compte GitHub et n'en créera pas.
 
 ### RG-liens-externes
 
 Un cadrage porte zéro, un ou plusieurs **liens vers des ressources externes**,
 chacun associé à un tag typé : carte Trello, issue GitHub, maquette, document.
 
+Les liens sont saisis manuellement. L'application ne va pas interroger les
+services externes : aucun jeton tiers à gérer, aucune dépendance à leur
+disponibilité.
+
 ### RG-decisions-options
 
 Une décision porte une description, les **options envisagées**, et l'option
 retenue ou l'annulation, chacune pouvant être commentée.
+
+Les options écartées sont conservées avec leur motif. C'est ce qui distingue une
+décision d'un simple choix : six mois plus tard, savoir ce qui a été envisagé et
+pourquoi ça ne l'a pas emporté vaut souvent plus que la décision elle-même.
+
