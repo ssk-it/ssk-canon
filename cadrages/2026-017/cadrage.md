@@ -1,7 +1,7 @@
 ---
 id: 2026-017
 titre: Essai du cycle de statut
-statut: brouillon
+statut: en_relecture
 domaines: []
 liens: []
 impacts: []
