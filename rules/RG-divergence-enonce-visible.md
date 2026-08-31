@@ -1,9 +1,9 @@
 ---
 id: RG-divergence-enonce-visible
-fonctionnalites: [historique, redaction-cadrage]
+fonctionnalites: [historique, consultation-cadrage]
 statut: actif
 cree_par: 2026-006
-modifie_par: []
+modifie_par: [2026-007]
 ---
 
 Lorsque l'énoncé porté par un cadrage diffère de l'énoncé courant de la règle,

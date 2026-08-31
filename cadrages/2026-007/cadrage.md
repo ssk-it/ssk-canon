@@ -9,6 +9,7 @@ impacts:
   - { regle: RG-sommaire-fiche-longue, operation: cree }
   - { regle: RG-position-de-lecture, operation: cree }
   - { regle: RG-sommaire-place-disponible, operation: cree }
+  - { regle: RG-divergence-enonce-visible, operation: modifie }
   - { regle: RG-decisions-options, operation: touche }
   - { regle: RG-operations-impact, operation: touche }
 ---
@@ -25,6 +26,12 @@ défiler jusqu'à le rencontrer.
 C'est un défaut qui s'aggrave avec la valeur du produit : plus un cadrage est
 soigneusement documenté — options écartées, impacts tracés — moins il est
 consultable. L'outil découragerait précisément ce qu'il cherche à encourager.
+
+Ce travail met au jour une lacune du modèle : la **consultation** d'un cadrage
+n'existait pas comme fonctionnalité. Les règles la concernant étaient rattachées
+à la rédaction, qui couvre un besoin différent — on rédige une fois,
+linéairement ; on consulte souvent, et rarement en entier. Le présent cadrage
+crée cette fonctionnalité et y rattache les règles qui en relèvent.
 
 ## Parcours utilisateur
 
@@ -71,3 +78,16 @@ Le sommaire n'apparaît que lorsque la largeur disponible permet de l'afficher
 
 En deçà, la fiche occupe toute la largeur. Un sommaire qui comprime le texte
 qu'il est censé aider à parcourir dessert son objet.
+
+### RG-divergence-enonce-visible
+
+Lorsque l'énoncé porté par un cadrage diffère de l'énoncé courant de la règle,
+l'application **signale l'écart et l'explique**.
+
+Un cadrage porte le texte au moment de sa livraison ; un cadrage ancien énonce
+donc légitimement un comportement depuis modifié. Sans explication, un lecteur
+prend cette différence pour une incohérence et perd confiance dans le
+référentiel.
+
+Le signalement précise que l'énoncé a été modifié par un cadrage ultérieur, et
+que le texte affiché est celui du cadrage consulté.

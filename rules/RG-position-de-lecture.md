@@ -1,6 +1,6 @@
 ---
 id: RG-position-de-lecture
-fonctionnalites: [redaction-cadrage]
+fonctionnalites: [consultation-cadrage]
 statut: actif
 cree_par: 2026-007
 modifie_par: []
