@@ -21,16 +21,16 @@ statuts:
   - validee
   - livree
 
-# Transitions de statut que l'application propose, depuis chaque statut.
-# « livree » n'y figure jamais : elle résulte de la fusion de la demande.
+# Transitions de statut que l’application propose, depuis chaque statut.
+# « livree » n’y figure jamais : elle résulte de la fusion de la demande.
 transitions:
   brouillon: [en_relecture]
   en_relecture: [brouillon, validee]
   validee: [en_relecture]
 
 # La demande de fusion reflète le statut : ouverte en brouillon tant que le
-# cadrage l'est, prête à relire dès qu'il passe en relecture.
-reflet_demande_fusion: true
+# cadrage l’est, prête à relire dès qu’il passe en relecture.
+reflet_demande_fusion: false
 
 operations:
   - cree
