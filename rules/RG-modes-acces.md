@@ -3,7 +3,7 @@ id: RG-modes-acces
 fonctionnalites: [authentification, autorisation]
 statut: actif
 cree_par: 2026-018
-modifie_par: []
+modifie_par: [2026-019]
 ---
 
 Un projet **déclare son mode d'accès** dans sa configuration, et l'application
@@ -17,7 +17,9 @@ que le précédent laissait, sans annuler ce qu'il apportait.
   rédacteur ait un compte sur la plateforme de dépôt.
 - **Identité tierce** — le rédacteur se connecte avec un compte indépendant de la
   plateforme de dépôt, et un composant échange cette identité contre un accès
-  temporaire. Le client n'a plus rien à créer ni à comprendre.
+  temporaire. Le client n'a plus rien à créer ni à comprendre. Ce composant n'est
+  pas sur le chemin des données : il est appelé à la connexion, puis l'application
+  s'adresse directement à la plateforme.
 - **Relais** — chaque requête passe par un composant qui la vérifie avant de la
   transmettre.
 
