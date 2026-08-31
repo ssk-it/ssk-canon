@@ -21,6 +21,7 @@ créé, il ne saura rien exprimer.
 | 2026-007 | Navigation dans une fiche de cadrage | livrée |
 | 2026-008 | Connexion facultative pour relever les limites d'appels | livrée |
 | 2026-009 | Repères temporels et ordre de la liste des cadrages | livrée |
+| 2026-010 | Mécanique de la propagation des impacts | livrée |
 
 ## Ce que ce dépôt couvre volontairement
 
@@ -48,6 +49,17 @@ créé, il ne saura rien exprimer.
 cd ../actions && npm install
 node src/check.mjs ../example-repo
 ```
+
+Et vérifier que le référentiel n'a pas dérivé de ses cadrages :
+
+```bash
+node src/propagate.mjs ../example-repo --dry-run
+```
+
+Cette seconde commande doit répondre « rien à propager ». Si elle propose des
+écritures, c'est qu'une règle a été modifiée sans passer par un cadrage — la
+dérive la plus insidieuse, puisqu'elle ne rompt aucune référence et ne produit
+aucun symptôme.
 
 La vérification contrôle notamment que les index `cree_par` et `modifie_par`
 correspondent aux impacts réellement déclarés par les cadrages livrés — ces champs
