@@ -1,7 +1,7 @@
 ---
 id: 2026-017
 titre: Essai du reflet
-statut: en_relecture
+statut: brouillon
 domaines: []
 liens: []
 impacts: []
