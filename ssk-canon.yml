@@ -40,7 +40,7 @@ acces: identite_tierce
 identite:
   emetteur: http://localhost:8088/realms/ssk-canon
   client: ssk-canon-pwa
-  echange: http://localhost:8790
+  echange: http://localhost:8791
 
 operations:
   - cree
