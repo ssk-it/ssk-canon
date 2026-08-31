@@ -33,18 +33,7 @@ transitions:
 reflet_demande_fusion: true
 
 # Comment les rédacteurs obtiennent l'accès au dépôt.
-#
-# Ce dépôt sert de jeu de test : il déclare « identite_tierce » pour éprouver ce
-# mode, ce qui suppose un émetteur d'identité joignable aux adresses ci-dessous.
-# Un projet ordinaire pointerait le sien.
-acces: identite_tierce
-
-# Où les identités sont vérifiées. Rien de secret ici : ce sont les valeurs que
-# porte toute application s'exécutant dans un navigateur.
-identite:
-  emetteur: http://localhost:8088/realms/ssk-canon
-  client: ssk-canon-pwa
-  echange: http://localhost:8790
+acces: jeton_personnel
 
 operations:
   - cree
