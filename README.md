@@ -17,6 +17,7 @@ créé, il ne saura rien exprimer.
 | 2026-003 | Choix du fournisseur de stockage objet | livrée |
 | 2026-004 | Initialisation du prototype | en relecture |
 | 2026-005 | Commentaires du client sur un cadrage | brouillon |
+| 2026-006 | Lecture du référentiel depuis un dépôt public | livrée |
 
 ## Ce que ce dépôt couvre volontairement
 
