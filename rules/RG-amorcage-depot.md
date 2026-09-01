@@ -3,7 +3,7 @@ id: RG-amorcage-depot
 fonctionnalites: [redaction-cadrage, stockage-git]
 statut: actif
 cree_par: 2026-020
-modifie_par: []
+modifie_par: [2026-021]
 ---
 
 L'application **dépose la structure d'un référentiel** dans un dépôt qui n'en a
@@ -20,3 +20,11 @@ branche ne peut de toute façon pas diverger de ce qui n'existe pas encore.
 Chaque répertoire reçoit une note expliquant ce qu'on y dépose. Un répertoire
 vide n'étant pas conservé par le support, il lui faut de toute façon un fichier :
 autant qu'il serve à celui qui ouvre le dépôt sur la plateforme.
+
+**L'amorçage propose d'installer l'automatisation**, et ne demande que le nom du
+projet. Le reste est facultatif : ce que le produit fait ne se devine pas, et
+un dépôt amorcé sans automatisation ne protège rien.
+
+**L'installation vient après le dépôt de la structure, non pendant.** Le droit
+d'écrire les workflows est distinct, et peut manquer là où le reste passe : si
+l'ordre était inverse, un refus laisserait un dépôt à moitié amorcé.
