@@ -2,7 +2,7 @@
 id: RG-parseur-partage
 fonctionnalites: [modele-referentiel, stockage-git]
 statut: actif
-cree_par: null
+cree_par: 2026-004
 modifie_par: [2026-016]
 ---
 
