@@ -1,7 +1,6 @@
 ---
 id: 2026-021
 titre: Installer l'automatisation, et cesser d'inventer une description
-statut: livree
 domaines: [cadrage, persistance]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

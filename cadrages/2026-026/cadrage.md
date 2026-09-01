@@ -1,7 +1,6 @@
 ---
 id: 2026-026
 titre: Écrire les décisions, sans rien perdre de ce qui était écrit
-statut: livree
 domaines: [cadrage, persistance]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

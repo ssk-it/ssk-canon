@@ -1,7 +1,6 @@
 ---
 id: 2026-032
 titre: 'Déduire le statut d''un cadrage de l''état du dépôt, plutôt que le déclarer'
-statut: brouillon
 domaines: [cadrage, acces]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon-pwa' }
@@ -14,6 +13,8 @@ impacts:
   - { regle: RG-branches-survivantes-signalees, operation: cree }
   - { regle: RG-branche-par-cadrage, operation: touche }
   - { regle: RG-garanties-annoncees, operation: touche }
+  - { regle: RG-format-fichier, operation: touche }
+  - { regle: RG-histoire-derivee, operation: touche }
 ---
 
 ## Objectif
@@ -118,6 +119,12 @@ que le rédacteur règle comme il l'entend, et non un moment du cycle de vie.
 La propagation retient donc les cadrages présents sur la branche principale, sans
 plus rien avoir à interroger. Elle reste idempotente et tout ou rien.
 
+Deux réglages de projet perdent par là même leur objet : la liste des
+**transitions** autorisées, puisqu'un statut déduit ne se choisit plus, et le
+**reflet de la demande de fusion**, puisque le statut ne commande plus son état
+d'avancement. Un projet qui les déclare encore les voit ignorés, sans erreur :
+ce sont des réglages devenus sans effet, non des réglages invalides.
+
 ### RG-cadrages-en-cours-visibles
 
 Les cadrages **non livrés sont visibles**, avec ceux du référentiel.
@@ -166,8 +173,8 @@ n'empêcherait de la réécrire. L'état courant est celui du dernier événemen
 date, validation ou annulation, quelle que soit sa forme.
 
 Une validation portée par commentaire est **périmée si la branche a avancé**
-depuis le commit qu'elle nomme. C'est ce que l'approbation native fait d'
-elle-même, et une validation qui survivrait à la modification de son objet ne
+depuis le commit qu'elle nomme. C'est ce que l'approbation native fait
+d'elle-même, et une validation qui survivrait à la modification de son objet ne
 voudrait plus rien dire.
 
 L'application **annonce laquelle des deux formes elle emploie** : une approbation

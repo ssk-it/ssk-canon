@@ -1,7 +1,6 @@
 ---
 id: 2026-027
 titre: Préparer plusieurs cadrages à la fois, et se fier au contrôle qui le dit
-statut: livree
 domaines: [cadrage, persistance]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

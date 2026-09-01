@@ -1,7 +1,6 @@
 ---
 id: 2026-028
 titre: Distinguer les domaines par la couleur, et choisir son thème
-statut: livree
 domaines: [referentiel, cadrage]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon-pwa' }

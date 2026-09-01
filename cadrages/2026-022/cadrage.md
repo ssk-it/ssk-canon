@@ -1,7 +1,6 @@
 ---
 id: 2026-022
 titre: Rédiger un cadrage depuis un dépôt de code
-statut: livree
 domaines: [cadrage, persistance]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

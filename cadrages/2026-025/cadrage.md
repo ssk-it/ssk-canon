@@ -1,7 +1,6 @@
 ---
 id: 2026-025
 titre: Voir les cadrages en cours, quel que soit le nom de leur branche
-statut: livree
 domaines: [cadrage, persistance]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

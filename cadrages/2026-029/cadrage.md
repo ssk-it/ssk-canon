@@ -1,7 +1,6 @@
 ---
 id: 2026-029
 titre: Adresser un projet par son URL
-statut: brouillon
 domaines: [persistance, cadrage]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon-pwa' }

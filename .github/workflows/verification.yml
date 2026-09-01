@@ -21,11 +21,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Le contrôle d'immuabilité compare la demande de fusion à la branche
+          # principale : sans l'historique, la comparaison est impossible et le
+          # contrôle se tait au lieu de bloquer.
+          fetch-depth: 0
 
-      # `appliquer: false` — la vérification ne modifie jamais le référentiel.
-      # Elle échoue si le cadrage est incohérent, ou si le référentiel a dérivé
-      # de ses cadrages.
-      - uses: ssk-it/ssk-canon-action@v1
+      # Suit la branche principale de l'outil, et non un tag de version : c'est
+      # ce dépôt-ci qui éprouve l'action, et un tag mobile demanderait d'être
+      # redéplacé à chaque publication — ce qui a été oublié, « v1 » étant resté
+      # sur la toute première release pendant que l'outil avançait.
+      - uses: ssk-it/ssk-canon-action@main
         with:
           referentiel: '.'
+          # La vérification ne modifie jamais le référentiel. Elle échoue si le
+          # cadrage est incohérent, ou si le référentiel a dérivé de ses cadrages.
           appliquer: 'false'
