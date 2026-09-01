@@ -3,7 +3,7 @@ id: RG-modes-acces
 fonctionnalites: [authentification, autorisation]
 statut: actif
 cree_par: 2026-018
-modifie_par: [2026-019]
+modifie_par: [2026-019, 2026-024]
 ---
 
 Un projet **déclare son mode d'accès** dans sa configuration, et l'application
@@ -23,5 +23,6 @@ que le précédent laissait, sans annuler ce qu'il apportait.
 - **Relais** — chaque requête passe par un composant qui la vérifie avant de la
   transmettre.
 
-Passer d'un mode au suivant ne demande de reprendre ni le référentiel ni les
-cadrages : ce qui change est la façon d'obtenir l'accès, non ce qu'on en fait.
+Le mode est déclaré par projet, et un rédacteur travaille sur plusieurs projets :
+**l'accès du mode « jeton personnel » se choisit donc selon le projet ouvert**,
+et non globalement. Voir `RG-acces-par-portee`.
