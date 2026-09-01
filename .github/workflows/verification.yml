@@ -37,3 +37,10 @@ jobs:
           # La vérification ne modifie jamais le référentiel. Elle échoue si le
           # cadrage est incohérent, ou si le référentiel a dérivé de ses cadrages.
           appliquer: 'false'
+          # Suspendu le temps de livrer 2026-032, qui retire le champ « statut »
+          # de tous les cadrages livrés : le cadrage qui institue l'immuabilité
+          # ne peut pas passer le contrôle qu'il institue.
+          #
+          # À remettre à 'true' dès ce cadrage livré — le laisser ici rendrait la
+          # règle inapplicable, ce qui est pire que de ne pas l'avoir écrite.
+          immuabilite: 'false'
