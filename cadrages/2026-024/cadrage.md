@@ -1,7 +1,6 @@
 ---
 id: 2026-024
 titre: Travailler sur plusieurs projets, chacun avec son accès
-statut: livree
 domaines: [acces, cadrage]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

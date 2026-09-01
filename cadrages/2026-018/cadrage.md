@@ -1,7 +1,6 @@
 ---
 id: 2026-018
 titre: Une gamme de modes d'accès
-statut: livree
 domaines: [acces, cadrage]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

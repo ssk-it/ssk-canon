@@ -1,7 +1,6 @@
 ---
 id: 2026-019
 titre: Se connecter sans compte sur la plateforme
-statut: livree
 domaines: [acces, cadrage]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

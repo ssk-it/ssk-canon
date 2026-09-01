@@ -1,7 +1,6 @@
 ---
 id: 2026-023
 titre: Maintenir l'outillage sans le laisser diverger
-statut: livree
 domaines: [cadrage]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

@@ -1,7 +1,6 @@
 ---
 id: 2026-017
 titre: Ce que l'application s'autorise sur un projet
-statut: livree
 domaines: [cadrage, acces, persistance]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

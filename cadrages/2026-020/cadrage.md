@@ -1,7 +1,6 @@
 ---
 id: 2026-020
 titre: Amorcer un dépôt vide
-statut: livree
 domaines: [cadrage, persistance]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon' }

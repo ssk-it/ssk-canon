@@ -3,7 +3,7 @@ id: RG-depot-choisi-memorise
 fonctionnalites: [stockage-git]
 statut: actif
 cree_par: 2026-006
-modifie_par: []
+modifie_par: [2026-029]
 ---
 
 Le dépôt de projet est **saisi par l'utilisateur et mémorisé** par le navigateur.

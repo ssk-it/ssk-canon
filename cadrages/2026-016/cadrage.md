@@ -1,7 +1,6 @@
 ---
 id: 2026-016
 titre: Une seule implémentation des règles du format
-statut: livree
 domaines: [referentiel, persistance, cadrage]
 liens:
   - { tag: issue_github, url: 'https://github.com/ssk-it/ssk-canon-action' }
