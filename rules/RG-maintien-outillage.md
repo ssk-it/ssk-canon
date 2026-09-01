@@ -3,7 +3,7 @@ id: RG-maintien-outillage
 fonctionnalites: [redaction-cadrage, impacts-regles]
 statut: actif
 cree_par: 2026-023
-modifie_par: []
+modifie_par: [2026-027]
 ---
 
 L'outillage distribué porte **de quoi être mis à jour sans diverger**.
@@ -17,6 +17,18 @@ jamais atteindre personne d'autre.
 constatée avant d'écrire est un renseignement ; découverte après, c'est du
 travail perdu. L'outil de comparaison nomme lequel a bougé, sans trancher à la
 place de celui qui lit.
+
+**Il compare ce qui existe, non une liste de ce qu'il croit exister.** Un
+inventaire écrit à la main oublie le fichier suivant, et ce qu'il oublie diverge
+sans que rien ne le dise — ce que l'outil existe précisément pour empêcher.
+
+**Il lit la version publiée sans intermédiaire.** Une lecture servie depuis un
+cache peut rendre un état révolu, et le contrôle annonce alors un travail en
+attente qui n'existe plus.
+
+**Un contrôle qui se trompe coûte plus cher que pas de contrôle.** Il fait
+douter d'un travail correct, et conduit à défaire ce qui était juste. Un message
+doit donc désigner le côté qui a réellement bougé, jamais le supposer.
 
 **Ce que rien ne vérifie doit être dit.** L'outillage n'est contrôlé par aucune
 intégration continue : la procédure qui le décrit est la seule vérification qui
