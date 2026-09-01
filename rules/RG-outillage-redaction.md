@@ -3,7 +3,7 @@ id: RG-outillage-redaction
 fonctionnalites: [redaction-cadrage, impacts-regles]
 statut: actif
 cree_par: 2026-022
-modifie_par: []
+modifie_par: [2026-023]
 ---
 
 L'outillage de rédaction est **distribué avec le format, non avec
@@ -25,3 +25,7 @@ qu'on recopie par-dessus sa propre déclaration l'efface.
 Ce qui décrit la machine du rédacteur — où les référentiels sont clonés — vit
 chez lui, et ne se commite nulle part. Ce qui décrit le projet vit dans le
 référentiel.
+
+**Ce qui sert à le maintenir est distribué avec lui.** Un outil de maintenance
+gardé à part de ce qu'il maintient est le premier à diverger, n'étant employé
+qu'au moment où l'on constate déjà un problème.
